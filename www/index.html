@@ -12,11 +12,72 @@
   <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
   <link rel="stylesheet" href="css/style.css">
   
+   
+  <script>
+    function kode(num) {
+        var area1;
+      switch (num) {
+        case 0:
+          area1 = "kasa.png";
+          break;
+        case 1:
+          area1 = "koikun.png";
+          break;
+        case 2:
+          area1 = "images/kasa.png";
+          break;
+        case 3:
+          area1 = "images/kasa.png";
+          break;
+        case 4:
+          area1 = "images/kasa.png";
+          break;
+        default:
+          area1 = "images/koikun.png";
+          break;
+      }
+      return area1;
+    }
+  </script>
+  
   <script>
       function start () {
+          var num=1;
+          var image_name;
+        //var num=0;
+        //var area1;
+        switch (num) {
+        case 0:
+          area1 = "kasa.png";
+          break;
+        case 1:
+          document.getElementById("print").src = "images/kasa.png" ;
+          break;
+        case 2:
+          area1 = "images/kasa.png";
+          break;
+        case 3:
+          area1 = "images/kasa.png";
+          break;
+        case 4:
+          area1 = "images/kasa.png";
+          break;
+        default:
+          area1 = "images/koikun.png";
+          break;
+      }
+      
+     /* if (num == 1) {
+                document.getElementById("print").src = "images/kasa.png" ;
+            } else if  (dice == 0) {
+                document.getElementById("print").src = "images/kasa.png" ;
+            }
+          
+       */     
           document.getElementById("start_wh").style["display"] = "none";
           document.getElementById("select_text").style["display"] = "none";
           document.getElementById("city_select").style["display"] = "none";
+          //document.getElementById("print").src = "images/kasa.png" ;
           document.getElementById("print").style["display"] = "block";          
       }
     </script>
@@ -130,8 +191,8 @@ angular.module('myApp', [])
           + data.weather[0].icon +'.png';
         $scope.name = data.weather[0].main; 
         $scope.temp = data.main.temp +'℃';
-         $scope.temp_min = data.main.temp_min +'℃';
-          $scope.temp_max = data.main.temp_max +'℃';
+         $scope.temp_min = '最低気温  '+data.main.temp_min +'℃';
+          $scope.temp_max = '最高気温  '+data.main.temp_max +'℃';
       })
       .error(function(err) {
         console.log(err);
@@ -146,8 +207,9 @@ angular.module('myApp', [])
     <div id=start_wh>
       <img src="images/start.png" alt="START" ng-click="onclick()" onclick="start()">
     </div>
-    <div id="print" style="display:none">
-     <img src="images/kasa.png" onclick="start()" width="100" height="100">
+    <div>
+    <img id="print" style="display:none">
+     
      </div>
 </body>
 </html>
