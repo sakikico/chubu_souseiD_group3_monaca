@@ -14,81 +14,92 @@
   
    
   <script>
-    function kode(num) {
-        var area1;
-      switch (num) {
-        case 0:
-          area1 = "kasa.png";
-          break;
-        case 1:
-          area1 = "koikun.png";
-          break;
-        case 2:
-          area1 = "images/kasa.png";
-          break;
-        case 3:
-          area1 = "images/kasa.png";
-          break;
-        case 4:
-          area1 = "images/kasa.png";
-          break;
-        default:
-          area1 = "images/koikun.png";
-          break;
-      }
-      return area1;
-    }
-  </script>
-  
-  <script>
+   
       function start () {
-          var num=1;
-          var image_name;
-        //var num=0;
-        //var area1;
+          var num=Math.floor(Math.random() * 5)+1;
+          var date=new Date();
+          var mh =date.getMonth();
+        /*if(tp >25){
+           num=num+5;
+        }else if(tp<15){
+            num=num+10;
+        }*/
+        if(mh>=10 || mh<=2)
+           num=num+10;
+        else if(mh>7)
+           num=num+5;
         switch (num) {
-        case 0:
-          area1 = "kasa.png";
-          break;
         case 1:
-          document.getElementById("print").src = "images/kasa.png" ;
+          document.getElementById("print").src = "images/code_1.PNG" ;
           break;
         case 2:
-          area1 = "images/kasa.png";
+          document.getElementById("print").src = "images/code_2.PNG" ;
           break;
         case 3:
-          area1 = "images/kasa.png";
+          document.getElementById("print").src = "images/code_3.PNG" ;
           break;
         case 4:
-          area1 = "images/kasa.png";
+          document.getElementById("print").src = "images/code_4.PNG" ;
+          break;
+        case 5:
+          document.getElementById("print").src = "images/code_5.PNG" ;
+          break;
+        case 6:
+          document.getElementById("print").src = "images/code_6.PNG" ;
+          break;
+        case 7:
+          document.getElementById("print").src = "images/code_7.PNG" ;
+          break;
+        case 8:
+          document.getElementById("print").src = "images/code_8.PNG" ;
+          break;
+        case 9:
+          document.getElementById("print").src = "images/code_9.PNG" ;
+          break;
+        case 10:
+          document.getElementById("print").src = "images/code_10.PNG" ;
+          break;
+        case 11:
+          document.getElementById("print").src = "images/code_11.PNG" ;
+          break;
+        case 12:
+          document.getElementById("print").src = "images/code_12.PNG" ;
+          break;
+        case 13:
+          document.getElementById("print").src = "images/code_13.PNG" ;
+          break;
+        case 14:
+          document.getElementById("print").src = "images/code_14.PNG" ;
+          break;
+        case 15:
+          document.getElementById("print").src = "images/code_15.PNG" ;
           break;
         default:
-          area1 = "images/koikun.png";
           break;
       }
       
-     /* if (num == 1) {
-                document.getElementById("print").src = "images/kasa.png" ;
-            } else if  (dice == 0) {
-                document.getElementById("print").src = "images/kasa.png" ;
-            }
-          
-       */     
+            
           document.getElementById("start_wh").style["display"] = "none";
           document.getElementById("select_text").style["display"] = "none";
           document.getElementById("city_select").style["display"] = "none";
+          document.getElementById("title").style["display"] = "none";
           //document.getElementById("print").src = "images/kasa.png" ;
           document.getElementById("print").style["display"] = "block";          
       }
     </script>
     <style>
         body {
-            background-image: url("images/mokume.jpg");
+            background-image: url("images/mokume_1.jpg");
             background-size: cover;
             background-repeat: no-repeat;
             margin: 0;
             padding: 0;
             text-align: center;
+        }
+        #title {
+            position: absolute;
+            top: 30px;
+            width: 100%;
         }
         #start_wh {
             position: absolute;
@@ -97,12 +108,12 @@
         }
         #city_select {
             position: absolute;
-            bottom: 260px;
+            bottom: 300px;
             width: 100%;
         }
         #select_text {
             position: absolute;
-            bottom: 290px;
+            bottom: 350px;
             width: 100%;
         }
         #icon {
@@ -111,9 +122,9 @@
         }
         #print {
             position: absolute;
-            bottom: 290px;
-            width: 50px;
-            height: 50px;
+            bottom: 90px;
+            left:  50px;
+            width: 70%;
             
         }
     </style>
@@ -158,6 +169,7 @@
         left: 200px;
     }
     .temp_max{
+        style.color="white";
         font-size: 20px;
         position: absolute;
         top: 80px;
@@ -207,9 +219,10 @@ angular.module('myApp', [])
     <div id=start_wh>
       <img src="images/start.png" alt="START" ng-click="onclick()" onclick="start()">
     </div>
+    <div id="title">
+      <img src="images/title.png" alt="title" >
     <div>
     <img id="print" style="display:none">
-     
      </div>
 </body>
 </html>
