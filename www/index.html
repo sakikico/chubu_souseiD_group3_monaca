@@ -8,84 +8,80 @@
     <script src="components/loader.js"></script>
     <link rel="stylesheet" href="components/loader.css">
     <link rel="stylesheet" href="css/style.css">
- <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
-  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
-  <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+    <link rel="stylesheet" href="css/style.css">
   
    
-  <script>
+    <script>
    
       function start () {
-          var num=Math.floor(Math.random() * 5)+1;
-          var date=new Date();
-          var mh =date.getMonth();
-        /*if(tp >25){
-           num=num+5;
-        }else if(tp<15){
-            num=num+10;
-        }*/
+        var num=Math.floor(Math.random() * 5)+1;
+        var date=new Date();
+        var mh =date.getMonth();
+        
         if(mh>=10 || mh<=2)
-           num=num+10;
+            num=num+10;
         else if(mh>7)
-           num=num+5;
+            num=num+5;
+           
         switch (num) {
-        case 1:
-          document.getElementById("print").src = "images/code_1.PNG" ;
-          break;
-        case 2:
-          document.getElementById("print").src = "images/code_2.PNG" ;
-          break;
-        case 3:
-          document.getElementById("print").src = "images/code_3.PNG" ;
-          break;
-        case 4:
-          document.getElementById("print").src = "images/code_4.PNG" ;
-          break;
-        case 5:
-          document.getElementById("print").src = "images/code_5.PNG" ;
-          break;
-        case 6:
-          document.getElementById("print").src = "images/code_6.PNG" ;
-          break;
-        case 7:
-          document.getElementById("print").src = "images/code_7.PNG" ;
-          break;
-        case 8:
-          document.getElementById("print").src = "images/code_8.PNG" ;
-          break;
-        case 9:
-          document.getElementById("print").src = "images/code_9.PNG" ;
-          break;
-        case 10:
-          document.getElementById("print").src = "images/code_10.PNG" ;
-          break;
-        case 11:
-          document.getElementById("print").src = "images/code_11.PNG" ;
-          break;
-        case 12:
-          document.getElementById("print").src = "images/code_12.PNG" ;
-          break;
-        case 13:
-          document.getElementById("print").src = "images/code_13.PNG" ;
-          break;
-        case 14:
-          document.getElementById("print").src = "images/code_14.PNG" ;
-          break;
-        case 15:
-          document.getElementById("print").src = "images/code_15.PNG" ;
-          break;
-        default:
-          break;
-      }
+            case 1:
+                document.getElementById("print").src = "images/code_1.PNG" ;
+                break;
+            case 2:
+                document.getElementById("print").src = "images/code_2.PNG" ;
+                break;
+            case 3:
+                document.getElementById("print").src = "images/code_3.PNG" ;
+                break;
+            case 4:
+                document.getElementById("print").src = "images/code_4.PNG" ;
+                break;
+            case 5:
+                document.getElementById("print").src = "images/code_5.PNG" ;
+                break;
+            case 6:
+                document.getElementById("print").src = "images/code_6.PNG" ;
+                break;
+            case 7:
+                document.getElementById("print").src = "images/code_7.PNG" ;
+                break;
+            case 8:
+                document.getElementById("print").src = "images/code_8.PNG" ;
+                break;
+            case 9:
+                document.getElementById("print").src = "images/code_9.PNG" ;
+                break;
+            case 10:
+                document.getElementById("print").src = "images/code_10.PNG" ;
+                break;
+            case 11:
+                document.getElementById("print").src = "images/code_11.PNG" ;
+                break;
+            case 12:
+                document.getElementById("print").src = "images/code_12.PNG" ;
+                break;
+            case 13:
+                document.getElementById("print").src = "images/code_13.PNG" ;
+                break;
+            case 14:
+                document.getElementById("print").src = "images/code_14.PNG" ;
+                break;
+            case 15:
+                document.getElementById("print").src = "images/code_15.PNG" ;
+                break;
+            default:
+                break;
+        }
       
             
-          document.getElementById("start_wh").style["display"] = "none";
-          document.getElementById("select_text").style["display"] = "none";
-          document.getElementById("city_select").style["display"] = "none";
-          document.getElementById("title").style["display"] = "none";
-          //document.getElementById("print").src = "images/kasa.png" ;
-          document.getElementById("print").style["display"] = "block";          
-      }
+        document.getElementById("start_wh").style["display"] = "none";
+        document.getElementById("select_text").style["display"] = "none";
+        document.getElementById("city_select").style["display"] = "none";
+        document.getElementById("title").style["display"] = "none";
+        document.getElementById("print").style["display"] = "block";          
+    }
     </script>
     <style>
         body {
@@ -214,16 +210,16 @@ angular.module('myApp', [])
 </script>
     <br />
     <div id=select_text>
-     <img src="images/select_txt.png" alt="Choose a city">
-     </div>
+        <img src="images/select_txt.png" alt="Choose a city">
+    </div>
     <div id=start_wh>
-      <img src="images/start.png" alt="START" ng-click="onclick()" onclick="start()">
+        <img src="images/start.png" alt="START" ng-click="onclick()" onclick="start()">
     </div>
     <div id="title">
-      <img src="images/title.png" alt="title" >
+        <img src="images/title.png" alt="title" >
     </div>
     <div>
-    <img id="print" style="display:none">
-     </div>
+        <img id="print" style="display:none">
+    </div>
 </body>
 </html>
